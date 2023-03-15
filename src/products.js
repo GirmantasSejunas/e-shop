@@ -4,7 +4,7 @@ export const PRODUCTS = [
     id: 1,
     productName: 'Nokia 3310',
     price:99,
-    productImage:'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Nokia_3310_Blue_R7309170_%28retouch%29.jpg/640px-Nokia_3310_Blue_R7309170_%28retouch%29.jpg;'
+    productImage:'https://kmobiles.lt/14-home_default/nokia-3310.jpg'
 
 },
 {
