@@ -10,27 +10,27 @@ import './cart.css'
 
 export const Cart = () => {
 
-  const {cartItems, getTotalAmount} = useContext(ShopContext)
+  const { cartItems, getTotalAmount } = useContext(ShopContext)
   const totalAmount = getTotalAmount()
   const navigate = useNavigate()
   return (
     <div className='cart'>
-      <div> 
-        <h1>Your products</h1> 
-        </div>
-        <div className='cartItems'> 
+      <div>
+        <h1>Your products</h1>
+      </div>
+      <div className='cartItems'>
         {PRODUCTS.map((product) => {
-          if(cartItems[product.id] !==0 ){
+          if (cartItems[product.id] !== 0) {
             return <CartItem data={product} />
           }
         })}
-        </div>
-        <div className='chechout'>
-          <p> Total: $ {totalAmount}</p>
-          <button onClick={() => navigate('/')}>Continue shoping</button>
-          <button>Buy</button>
+      </div>
+      <div className='chechout'>
+        <p> Total: $ {totalAmount}</p>
+        <button onClick={() => navigate('/')}>Continue shoping</button>
+        <button>Buy</button>
 
-        </div>
+      </div>
 
     </div>
   )
