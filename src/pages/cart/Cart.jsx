@@ -1,14 +1,18 @@
+/* eslint-disable array-callback-return */
 import React, { useContext } from 'react'
 import { ShopContext } from '../../context/Shop-context'
 import { PRODUCTS } from '../../products'
 import { CartItem } from './Cart-Item'
+import { useNavigate } from 'react-router-dom'
 import './cart.css'
 
 
 
 export const Cart = () => {
 
-  const {cartItems} = useContext(ShopContext)
+  const {cartItems, getTotalAmount} = useContext(ShopContext)
+  const totalAmount = getTotalAmount()
+  const navigate = useNavigate()
   return (
     <div className='cart'>
       <div> 
@@ -20,6 +24,12 @@ export const Cart = () => {
             return <CartItem data={product} />
           }
         })}
+        </div>
+        <div className='chechout'>
+          <p> Total: $ {totalAmount}</p>
+          <button onClick={() => navigate('/')}>Continue shoping</button>
+          <button>Buy</button>
+
         </div>
 
     </div>
