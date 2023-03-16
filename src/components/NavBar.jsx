@@ -6,6 +6,9 @@ import './navBar.css'
 const NavBar = () => {
   return (
     <div className='navbar' >
+      <div className='form'>
+      <Link to='/form' >Login/Register</Link>
+      </div>
       <div className='links'>
         <Link to='/'>Shop</Link>
         <Link to='cart'>

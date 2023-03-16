@@ -4,6 +4,7 @@ import NavBar from './components/NavBar';
 import { Footer } from './components/Footer';
 import { Shop } from './pages/shop/Shop';
 import { Cart } from './pages/cart/Cart';
+import { Form } from './pages/form/Form';
 import { ShopContextProvider } from './context/Shop-context';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
           <Routes>
             <Route path='/' element={<Shop />} />
             <Route path='/cart' element={<Cart />} />
+            <Route path='/form' element={<Form />} />
           </Routes>
           <Footer />
         </BrowserRouter>
